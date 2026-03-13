@@ -19,18 +19,41 @@ import {
 
 const DivisorRojo = () => <div className="divisor-rojo mx-auto" />;
 
-const BotonAccion = ({ texto, href = "#oferta" }: { texto: string; href?: string }) => (
-  <motion.a
-    href={href}
-    target={href.startsWith("http") ? "_blank" : undefined}
-    rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
-    whileHover={{ scale: 1.05 }}
-    whileTap={{ scale: 0.95 }}
-    className="boton-accion"
-  >
-    {texto}
-  </motion.a>
-);
+const BotonAccion = ({ texto, href = "#oferta" }: { texto: string; href?: string }) => {
+  const esExterno = href.startsWith("http");
+
+  if (esExterno) {
+    return (
+      <motion.a
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
+        className="boton-accion cursor-pointer"
+      >
+        {texto}
+      </motion.a>
+    );
+  }
+
+  return (
+    <motion.button
+      onClick={() => {
+        const id = href.replace("#", "");
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      }}
+      whileHover={{ scale: 1.05 }}
+      whileTap={{ scale: 0.95 }}
+      className="boton-accion cursor-pointer"
+    >
+      {texto}
+    </motion.button>
+  );
+};
 
 export default function App() {
   return (
