@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,700;0,900;1,700&display=swap');
 @import "tailwindcss";
 
 @theme {
@@ -24,11 +25,11 @@
   }
 
   h1, h2, h3, h4 {
-    @apply font-serif;
+    @apply font-serif leading-tight;
   }
 
   p {
-    @apply leading-relaxed mb-6 text-lg;
+    @apply leading-relaxed mb-4 text-base md:text-lg text-brand-dark/90;
   }
 }
 
@@ -45,7 +46,7 @@
 }
 
 .boton-accion {
-  @apply bg-brand-red text-white font-bold py-5 px-10 rounded-none transition-all duration-300 transform hover:scale-105 hover:bg-brand-red-hover shadow-lg uppercase tracking-widest text-center inline-block;
+  @apply bg-brand-red text-white font-bold py-4 px-8 rounded-none transition-all duration-300 transform hover:scale-105 hover:bg-brand-red-hover shadow-lg uppercase tracking-widest text-center inline-block text-sm md:text-base;
 }
 
 .texto-resaltado-rojo {
@@ -53,5 +54,5 @@
 }
 
 .divisor-rojo {
-  @apply w-24 h-1 bg-brand-red my-8;
+  @apply w-20 h-1 bg-brand-red my-6;
 }

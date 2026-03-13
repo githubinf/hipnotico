@@ -59,7 +59,7 @@ export default function App() {
   return (
     <div className="min-h-screen selection:bg-brand-red selection:text-white">
       {/* SECCIÓN DE IMPACTO INICIAL (HERO) */}
-      <header className="seccion-oscura py-24 px-6 border-b border-white/10">
+      <header className="seccion-oscura py-20 px-6 border-b border-white/10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -70,7 +70,7 @@ export default function App() {
             <h2 className="text-brand-red uppercase tracking-[0.3em] text-sm mb-6 font-semibold">
               Francisco González presenta
             </h2>
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-8 leading-tight">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
               El Vendedor <span className="text-brand-red">Hipnótico</span>
             </h1>
             <p className="text-xl md:text-2xl font-serif italic text-brand-gray-light leading-relaxed mb-8">
@@ -89,13 +89,15 @@ export default function App() {
               alt="Portada del libro El Vendedor Hipnótico"
               className="w-full max-w-[400px] shadow-2xl rounded-lg transform hover:scale-105 transition-transform duration-500"
               referrerPolicy="no-referrer"
+              loading="eager"
+              fetchPriority="high"
             />
           </div>
         </motion.div>
       </header>
 
       {/* SECCIÓN DEL GANCHO EMOCIONAL */}
-      <section className="seccion-clara py-24 px-6">
+      <section className="seccion-clara py-20 px-6">
         <div className="max-w-4xl mx-auto">
           <motion.div
             initial={{ opacity: 0 }}
@@ -129,7 +131,7 @@ export default function App() {
       </section>
 
       {/* FILOSOFÍA */}
-      <section className="py-24 px-6 bg-brand-dark text-white overflow-hidden relative">
+      <section className="py-20 px-6 bg-brand-dark text-white overflow-hidden relative">
         <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
           <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-brand-red rounded-full blur-[120px]"></div>
           <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-brand-red rounded-full blur-[120px]"></div>
@@ -137,7 +139,7 @@ export default function App() {
         <div className="max-w-4xl mx-auto relative z-10">
           <h2 className="text-sm uppercase tracking-[0.5em] text-brand-red font-bold mb-8 text-center">La Filosofía Detrás del Libro</h2>
           <div className="space-y-12 text-center">
-            <p className="text-3xl md:text-5xl font-serif leading-tight italic">
+            <p className="text-2xl md:text-4xl font-serif leading-tight italic">
               "Vender no es convencer a alguien de que haga algo que no quiere. Vender es ayudar a alguien a descubrir que lo que tú tienes es lo que siempre ha necesitado."
             </p>
             <div className="h-px w-24 bg-brand-red mx-auto"></div>
@@ -166,7 +168,7 @@ export default function App() {
       </section>
 
       {/* SECCIÓN DEL PROBLEMA */}
-      <section className="seccion-gris py-24 px-6">
+      <section className="seccion-gris py-20 px-6">
         <div className="max-w-5xl mx-auto">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div>
@@ -207,9 +209,9 @@ export default function App() {
       </section>
 
       {/* LA VERDAD INCÓMODA */}
-      <section className="seccion-clara py-24 px-6">
+      <section className="seccion-clara py-20 px-6">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-12">La verdad incómoda sobre las ventas</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-12">La verdad incómoda sobre las ventas</h2>
           <div className="space-y-8 text-left">
             <p>
               Llevamos años repitiendo un error. Creemos que vender es convencer. Que tener éxito significa hablar más, argumentar mejor, cerrar más rápido. Pero la realidad es otra, mucho más profunda y sutil.
@@ -239,10 +241,10 @@ export default function App() {
       </section>
 
       {/* DEFINICIÓN DEL VENDEDOR HIPNÓTICO */}
-      <section className="seccion-oscura py-24 px-6">
+      <section className="seccion-oscura py-20 px-6">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">¿Qué es un vendedor hipnótico?</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">¿Qué es un vendedor hipnótico?</h2>
             <p className="text-brand-gray-medium text-xl">(Y qué no es)</p>
           </div>
           <div className="grid md:grid-cols-2 gap-12">
@@ -270,10 +272,10 @@ export default function App() {
       </section>
 
       {/* LA CIENCIA */}
-      <section className="seccion-clara py-24 px-6">
+      <section className="seccion-clara py-20 px-6">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-20">
-            <h2 className="text-4xl font-bold mb-4">La ciencia detrás de la venta hipnótica</h2>
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">La ciencia detrás de la venta hipnótica</h2>
             <p className="text-xl text-brand-gray-medium">Esto no es magia. Es comprensión profunda de la mente humana.</p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
@@ -321,9 +323,9 @@ export default function App() {
       </section>
 
       {/* EL CONTENIDO DEL LIBRO (18 CAPÍTULOS) */}
-      <section className="seccion-clara py-24 px-6 border-t border-brand-gray-light">
+      <section className="seccion-clara py-20 px-6 border-t border-brand-gray-light">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-20">Lo que aprenderás en este viaje de transformación</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">Lo que aprenderás en este viaje de transformación</h2>
           
           <div className="space-y-24">
             {/* PARTE I */}
@@ -482,9 +484,9 @@ export default function App() {
       </section>
 
       {/* METODOLOGÍA DETALLADA */}
-      <section className="py-24 px-6 bg-white">
+      <section className="py-20 px-6 bg-white">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-5xl font-serif mb-16 text-center">La metodología del Bucle Hipnótico</h2>
+          <h2 className="text-2xl md:text-4xl font-serif mb-12 text-center">La metodología del Bucle Hipnótico</h2>
           <div className="space-y-16">
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
@@ -526,7 +528,7 @@ export default function App() {
       </section>
 
       {/* PARA QUIÉN ES */}
-      <section className="seccion-gris py-24 px-6">
+      <section className="seccion-gris py-20 px-6">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-16">
             <div className="bg-white p-12 shadow-xl border-t-4 border-brand-red">
@@ -568,7 +570,7 @@ export default function App() {
       </section>
 
       {/* CARTA DEL AUTOR */}
-      <section className="py-24 px-6 bg-brand-gray-light">
+      <section className="py-20 px-6 bg-brand-gray-light">
         <div className="max-w-3xl mx-auto">
           <div className="bg-white p-12 md:p-20 shadow-2xl rounded-sm">
             <h2 className="text-3xl font-serif mb-8 italic">Una carta personal para ti</h2>
@@ -600,9 +602,9 @@ export default function App() {
       </section>
 
       {/* PREGUNTAS FRECUENTES */}
-      <section className="seccion-clara py-24 px-6">
+      <section className="seccion-clara py-20 px-6">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-16">Preguntas frecuentes</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Preguntas frecuentes</h2>
           <div className="space-y-12">
             {[
               {
@@ -640,9 +642,9 @@ export default function App() {
       </section>
 
       {/* SOBRE EL AUTOR */}
-      <section className="seccion-oscura py-24 px-6">
+      <section className="seccion-oscura py-20 px-6">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-12">Sobre el autor</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-10">Sobre el autor</h2>
           <div className="space-y-8 text-left">
             <p className="text-xl leading-relaxed">
               Me llamo <span className="text-brand-red font-bold">Francisco González</span>, y no, no soy un gurú de la mercadotecnia con décadas de experiencia en agencias internacionales. Soy alguien como tú: curioso, apasionado y, sobre todo, aprendiz constante de la naturaleza humana.
@@ -664,10 +666,10 @@ export default function App() {
       </section>
 
       {/* GARANTÍA */}
-      <section className="seccion-clara py-24 px-6">
-        <div className="max-w-4xl mx-auto text-center bg-brand-gray-light p-16 border-2 border-dashed border-brand-red">
-          <ShieldCheck className="text-brand-red mx-auto mb-8" size={80} />
-          <h2 className="text-4xl font-bold mb-6">Garantía incondicional de treinta días</h2>
+      <section className="seccion-clara py-20 px-6">
+        <div className="max-w-4xl mx-auto text-center bg-brand-gray-light p-12 border-2 border-dashed border-brand-red">
+          <ShieldCheck className="text-brand-red mx-auto mb-6" size={64} />
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Garantía incondicional de treinta días</h2>
           <p className="text-xl mb-8">
             Si después de leer este libro consideras que no cumple tus expectativas, o simplemente no es lo que buscabas, tienes treinta días para solicitar la devolución de tu dinero.
           </p>
@@ -719,7 +721,7 @@ export default function App() {
       </section>
 
       {/* MANIFIESTO FINAL */}
-      <section className="py-24 px-6 bg-brand-dark text-white">
+      <section className="py-20 px-6 bg-brand-dark text-white">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-sm uppercase tracking-[0.5em] text-brand-red font-bold mb-12">El Manifiesto del Vendedor Hipnótico</h2>
           <div className="space-y-12 text-2xl md:text-3xl font-serif italic leading-relaxed opacity-90">
@@ -745,7 +747,7 @@ export default function App() {
       </section>
 
       {/* CIERRE EMOCIONAL */}
-      <footer className="seccion-oscura py-24 px-6 text-center">
+      <footer className="seccion-oscura py-20 px-6 text-center">
         <div className="max-w-3xl mx-auto">
           <h3 className="text-3xl font-serif italic mb-8">Un último pensamiento antes de que decidas</h3>
           <p className="text-lg text-brand-gray-light mb-12">
