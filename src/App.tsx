@@ -19,9 +19,11 @@ import {
 
 const DivisorRojo = () => <div className="divisor-rojo mx-auto" />;
 
-const BotonAccion = ({ texto }: { texto: string }) => (
+const BotonAccion = ({ texto, href = "#oferta" }: { texto: string; href?: string }) => (
   <motion.a
-    href="#oferta"
+    href={href}
+    target={href.startsWith("http") ? "_blank" : undefined}
+    rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
     whileHover={{ scale: 1.05 }}
     whileTap={{ scale: 0.95 }}
     className="boton-accion"
@@ -653,19 +655,19 @@ export default function App() {
       </section>
 
       {/* SECCIÓN DE OFERTA FINAL */}
-      <section id="oferta" className="seccion-clara py-24 px-6">
+      <section id="oferta" className="seccion-clara py-16 px-6 scroll-mt-10">
         <div className="max-w-4xl mx-auto">
-          <div className="bg-white border-4 border-brand-red p-12 text-center shadow-2xl">
+          <div className="bg-white border-4 border-brand-red p-8 md:p-12 text-center shadow-2xl">
             <h2 className="text-5xl font-bold mb-4">El Vendedor Hipnótico</h2>
-            <p className="text-xl text-brand-gray-medium mb-12">Domina el arte de la seducción emocional para vender sin presionar</p>
+            <p className="text-xl text-brand-gray-medium mb-8">Domina el arte de la seducción emocional para vender sin presionar</p>
             
-            <div className="mb-12">
+            <div className="mb-8">
               <span className="text-brand-gray-medium line-through text-2xl mr-4">$47,00</span>
               <span className="text-6xl font-bold text-brand-red">$9,99</span>
               <p className="text-sm text-brand-gray-medium mt-2">Pago único. Acceso inmediato.</p>
             </div>
 
-            <div className="space-y-6 mb-12 text-left max-w-md mx-auto">
+            <div className="space-y-4 mb-8 text-left max-w-md mx-auto">
               <div className="flex items-center gap-3">
                 <BookOpen className="text-brand-red" size={24} />
                 <span>Más de trescientas páginas de contenido</span>
@@ -680,7 +682,10 @@ export default function App() {
               </div>
             </div>
 
-            <BotonAccion texto="Quiero empezar mi transformación" />
+            <BotonAccion 
+              texto="Quiero empezar mi transformación" 
+              href="https://fcofrancis.pay.clickbank.net/?cbitems=10" 
+            />
             
             <div className="mt-8 flex items-center justify-center gap-4 text-brand-gray-medium text-sm">
               <ShieldCheck size={16} />
