@@ -29,7 +29,7 @@
   }
 
   p {
-    @apply leading-relaxed mb-4 text-base md:text-lg text-brand-dark/90;
+    @apply leading-relaxed mb-4 text-base md:text-lg;
   }
 }
 

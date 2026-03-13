@@ -241,33 +241,81 @@ export default function App() {
       </section>
 
       {/* DEFINICIÓN DEL VENDEDOR HIPNÓTICO */}
-      <section className="seccion-oscura py-20 px-6">
-        <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">¿Qué es un vendedor hipnótico?</h2>
-            <p className="text-brand-gray-medium text-xl">(Y qué no es)</p>
+      <section className="seccion-oscura py-24 px-6 relative overflow-hidden">
+        {/* Decoración sutil de fondo */}
+        <div className="absolute top-0 right-0 w-96 h-96 bg-brand-red/5 rounded-full blur-3xl -mr-48 -mt-48"></div>
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-brand-red/5 rounded-full blur-3xl -ml-48 -mb-48"></div>
+
+        <div className="max-w-5xl mx-auto relative z-10">
+          <div className="text-center mb-20">
+            <motion.h2 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-4xl md:text-5xl font-bold mb-6"
+            >
+              ¿Qué es un vendedor hipnótico?
+            </motion.h2>
+            <motion.p 
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+              className="text-brand-red font-medium text-xl tracking-widest uppercase"
+            >
+              (Y lo que definitivamente no es)
+            </motion.p>
+            <div className="divisor-rojo mx-auto mt-8"></div>
           </div>
-          <div className="grid md:grid-cols-2 gap-12">
-            <div className="space-y-6">
-              <p className="text-lg">
-                Antes de seguir, necesito despejar un malentendido. Un vendedor hipnótico no es un manipulador. No juega con las emociones ajenas para obtener ventaja. No explota miedos ni inseguridades. No usa frases secretas para controlar voluntades.
+
+          <div className="grid md:grid-cols-2 gap-16 items-center">
+            <motion.div 
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="space-y-8"
+            >
+              <div className="space-y-6">
+                <p className="text-xl text-white/90 leading-relaxed">
+                  Antes de seguir, necesito despejar un malentendido común que frena a muchos profesionales.
+                </p>
+                <p className="text-lg text-white/70 leading-relaxed">
+                  Un vendedor hipnótico <span className="text-white font-bold">no es un manipulador</span>. No juega con las emociones ajenas para obtener ventaja egoísta. No explota miedos ni inseguridades. No usa frases "mágicas" para anular la voluntad del otro.
+                </p>
+                <p className="text-lg text-white/70 leading-relaxed">
+                  Tampoco depende de trucos baratos ni de un carisma extrovertido. De hecho, muchos de los vendedores más efectivos son personas tranquilas, reflexivas e incluso introvertidas que han entendido algo que los demás ignoran.
+                </p>
+              </div>
+            </motion.div>
+
+            <motion.div 
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="bg-brand-dark/50 backdrop-blur-sm p-10 border-l-4 border-brand-red shadow-2xl"
+            >
+              <h4 className="text-2xl font-bold mb-6 text-brand-red italic">La esencia: Un conector humano</h4>
+              <p className="text-xl text-white/90 italic leading-relaxed font-light">
+                "Es alguien que ha aprendido a ir más allá de las palabras superficiales para tocar lo que realmente mueve a las personas: sus anhelos más profundos, sus miedos no dichos y la versión de sí mismos que sueñan alcanzar."
               </p>
-              <p className="text-lg">
-                Tampoco depende de trucos ni de un carisma innato. De hecho, muchos de los vendedores más efectivos son personas tranquilas, reflexivas, incluso introvertidas.
-              </p>
-            </div>
-            <div className="bg-brand-dark p-8 border-l-4 border-brand-red">
-              <h4 className="text-2xl font-bold mb-4 text-brand-red">Un conector humano</h4>
-              <p className="text-lg italic">
-                "Es alguien que ha aprendido a ir más allá de las palabras para tocar lo que realmente mueve a las personas: sus emociones, sus anhelos, sus miedos no dichos, la versión de sí mismos que sueñan alcanzar."
-              </p>
-            </div>
+            </motion.div>
           </div>
-          <div className="mt-16 prose prose-invert max-w-none">
-            <p className="text-xl leading-relaxed">
-              Su presencia —calmada, segura, auténtica— transmite un mensaje silencioso: <span className="text-brand-red font-bold">"Estás a salvo aquí"</span>. Su escucha no es pasiva; es una forma de liderazgo emocional que invita al cliente a profundizar, reflexionar y, finalmente, reconocer por sí mismo que la solución que ofrece no es una opción más... es la respuesta que estaba esperando.
+
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.4 }}
+            className="mt-20 p-10 bg-white/5 border border-white/10 rounded-2xl"
+          >
+            <p className="text-2xl md:text-3xl leading-tight text-center text-white/95 font-serif italic">
+              Su presencia transmite un mensaje silencioso pero imparable: <br className="hidden md:block" />
+              <span className="text-brand-red font-bold not-italic mt-4 block md:inline">"Estás a salvo aquí, yo te guío."</span>
             </p>
-          </div>
+            <p className="mt-8 text-lg text-white/60 text-center max-w-3xl mx-auto">
+              Su escucha no es pasiva; es una forma de liderazgo emocional que invita al cliente a reconocer por sí mismo que tu solución es la respuesta que estaba esperando.
+            </p>
+          </motion.div>
         </div>
       </section>
 
