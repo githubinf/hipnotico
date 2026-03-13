@@ -19,7 +19,7 @@ import {
 
 const DivisorRojo = () => <div className="divisor-rojo mx-auto" />;
 
-const BotonAccion = ({ texto, href = "#oferta" }: { texto: string; href?: string }) => {
+const BotonAccion = ({ texto, href = "#oferta", rel }: { texto: string; href?: string; rel?: string }) => {
   const esExterno = href.startsWith("http");
 
   if (esExterno) {
@@ -27,7 +27,7 @@ const BotonAccion = ({ texto, href = "#oferta" }: { texto: string; href?: string
       <motion.a
         href={href}
         target="_blank"
-        rel="noopener noreferrer"
+        rel={rel || "noopener noreferrer"}
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
         className="boton-accion cursor-pointer"
@@ -236,6 +236,9 @@ export default function App() {
             <p className="pt-8">
               La lógica justifica la decisión. Pero la emoción la impulsa. Y si tu mensaje no toca esa emoción, por muy sólido que sea tu argumento, sonará vacío. El vendedor tradicional habla de características. El vendedor hipnótico habla de transformaciones.
             </p>
+            <div className="mt-12 text-center">
+              <BotonAccion texto="Quiero aprender a conectar" />
+            </div>
           </div>
         </div>
       </section>
@@ -371,7 +374,7 @@ export default function App() {
       </section>
 
       {/* EL CONTENIDO DEL LIBRO (18 CAPÍTULOS) */}
-      <section className="seccion-clara py-20 px-6 border-t border-brand-gray-light">
+      <section className="seccion-clara pt-10 pb-20 px-6 border-t border-brand-gray-light">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">Lo que aprenderás en este viaje de transformación</h2>
           
@@ -532,7 +535,7 @@ export default function App() {
       </section>
 
       {/* METODOLOGÍA DETALLADA */}
-      <section className="py-20 px-6 bg-white">
+      <section className="pt-10 pb-20 px-6 bg-white">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-2xl md:text-4xl font-serif mb-12 text-center">La metodología del Bucle Hipnótico</h2>
           <div className="space-y-16">
@@ -576,7 +579,7 @@ export default function App() {
       </section>
 
       {/* PARA QUIÉN ES */}
-      <section className="seccion-gris py-20 px-6">
+      <section className="seccion-gris pt-20 pb-10 px-6">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-16">
             <div className="bg-white p-12 shadow-xl border-t-4 border-brand-red">
@@ -613,6 +616,9 @@ export default function App() {
                 ))}
               </ul>
             </div>
+          </div>
+          <div className="mt-16 text-center">
+            <BotonAccion texto="Este es mi camino" />
           </div>
         </div>
       </section>
@@ -758,6 +764,7 @@ export default function App() {
             <BotonAccion 
               texto="Quiero empezar mi transformación" 
               href="https://fcofrancis.pay.clickbank.net/?cbitems=10" 
+              rel="nofollow noopener noreferrer"
             />
             
             <div className="mt-8 flex items-center justify-center gap-4 text-brand-gray-medium text-sm">
@@ -787,9 +794,7 @@ export default function App() {
             </p>
           </div>
           <div className="mt-20">
-            <a href="#oferta" className="boton-accion inline-block px-12 py-6 text-xl">
-              Únete a la Maestría Ahora
-            </a>
+            <BotonAccion texto="Únete a la Maestría Ahora" />
           </div>
         </div>
       </section>
