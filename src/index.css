@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Playfair Display", serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+  --color-brand-red: #D92A27;
+  --color-brand-red-hover: #B61F1C;
+  --color-brand-black: #000000;
+  --color-brand-dark: #1A1A1A;
+  --color-brand-gray-light: #E6E6E6;
+  --color-brand-gray-medium: #777777;
+}
+
+@layer base {
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
+
+  body {
+    @apply font-sans text-brand-black antialiased;
+    background-color: #FFFFFF;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-serif;
+  }
+
+  p {
+    @apply leading-relaxed mb-6 text-lg;
+  }
+}
+
+.seccion-oscura {
+  @apply bg-brand-black text-white;
+}
+
+.seccion-clara {
+  @apply bg-white text-brand-black;
+}
+
+.seccion-gris {
+  @apply bg-brand-gray-light text-brand-black;
+}
+
+.boton-accion {
+  @apply bg-brand-red text-white font-bold py-5 px-10 rounded-none transition-all duration-300 transform hover:scale-105 hover:bg-brand-red-hover shadow-lg uppercase tracking-widest text-center inline-block;
+}
+
+.texto-resaltado-rojo {
+  @apply text-brand-red font-semibold;
+}
+
+.divisor-rojo {
+  @apply w-24 h-1 bg-brand-red my-8;
+}
