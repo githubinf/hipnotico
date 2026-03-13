@@ -579,7 +579,7 @@ export default function App() {
       </section>
 
       {/* PARA QUIÉN ES */}
-      <section className="seccion-gris pt-20 pb-10 px-6">
+      <section className="seccion-gris pt-20 pb-16 px-6">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-16">
             <div className="bg-white p-12 shadow-xl border-t-4 border-brand-red">
@@ -624,7 +624,7 @@ export default function App() {
       </section>
 
       {/* CARTA DEL AUTOR */}
-      <section className="py-20 px-6 bg-brand-gray-light">
+      <section className="pt-10 pb-20 px-6 bg-brand-gray-light">
         <div className="max-w-3xl mx-auto">
           <div className="bg-white p-12 md:p-20 shadow-2xl rounded-sm">
             <h2 className="text-3xl font-serif mb-8 italic">Una carta personal para ti</h2>
