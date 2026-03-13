@@ -34,24 +34,37 @@ export default function App() {
   return (
     <div className="min-h-screen selection:bg-brand-red selection:text-white">
       {/* SECCIÓN DE IMPACTO INICIAL (HERO) */}
-      <header className="seccion-oscura py-24 px-6 text-center border-b border-white/10">
+      <header className="seccion-oscura py-24 px-6 border-b border-white/10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="max-w-5xl mx-auto"
+          className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center"
         >
-          <h2 className="text-brand-red uppercase tracking-[0.3em] text-sm mb-6 font-semibold">
-            Francisco González presenta
-          </h2>
-          <h1 className="text-5xl md:text-8xl font-bold mb-8 leading-tight">
-            El Vendedor <span className="text-brand-red">Hipnótico</span>
-          </h1>
-          <p className="text-xl md:text-3xl font-serif italic text-brand-gray-light max-w-3xl mx-auto leading-relaxed">
-            Domina el arte de la seducción emocional para vender sin presionar
-          </p>
-          <div className="mt-12">
-            <BotonAccion texto="Quiero empezar mi transformación" />
+          <div className="text-center md:text-left">
+            <h2 className="text-brand-red uppercase tracking-[0.3em] text-sm mb-6 font-semibold">
+              Francisco González presenta
+            </h2>
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-8 leading-tight">
+              El Vendedor <span className="text-brand-red">Hipnótico</span>
+            </h1>
+            <p className="text-xl md:text-2xl font-serif italic text-brand-gray-light leading-relaxed mb-8">
+              Domina el arte de la seducción emocional para vender sin presionar
+            </p>
+            <div className="mt-12">
+              <BotonAccion texto="Quiero empezar mi transformación" />
+            </div>
+          </div>
+          <div className="flex justify-center md:justify-end">
+            <motion.img
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.4, duration: 0.8 }}
+              src="https://i.ibb.co/MxQ4C7TZ/el-vendedor-hipnotico-ebook.png"
+              alt="Portada del libro El Vendedor Hipnótico"
+              className="w-full max-w-[400px] shadow-2xl rounded-lg transform hover:scale-105 transition-transform duration-500"
+              referrerPolicy="no-referrer"
+            />
           </div>
         </motion.div>
       </header>
