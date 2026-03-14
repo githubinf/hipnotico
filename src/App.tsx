@@ -91,6 +91,7 @@ export default function App() {
               referrerPolicy="no-referrer"
               loading="eager"
               fetchPriority="high"
+              decoding="async"
             />
           </div>
         </motion.div>
